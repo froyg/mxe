@@ -27,6 +27,7 @@ define $(PKG)_BUILD
         --disable-bsdtar \
         --disable-bsdcpio \
         --disable-bsdcat \
+	--without-cng \
         XML2_CONFIG='$(PREFIX)/$(TARGET)'/bin/xml2-config
     $(MAKE) -C '$(1)' -j '$(JOBS)' man_MANS=
     $(MAKE) -C '$(1)' -j 1 install man_MANS=
